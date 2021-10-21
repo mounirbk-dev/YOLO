@@ -1,7 +1,7 @@
 var Discord = require('discord.js'); // Chargement de la librairie discord.js
 
 const client = new Discord.Client();  // Création du bot
-const Token = "OTAwMzgzNTY1ODYxMjUzMTUw.YXAhig.Wm01ykCmBXK79foUEz963z-ZGrA"
+const Token = "OTAwMzgzNTY1ODYxMjUzMTUw.YXAhig.uefM7kqiK6i9-QI7Kt0XBiOvsj4"
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
