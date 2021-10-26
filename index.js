@@ -1,7 +1,7 @@
 var Discord = require('discord.js'); // Chargement de la librairie discord.js
 
 const client = new Discord.Client();  // Création du bot
-const Token = "OTAwMzgzNTY1ODYxMjUzMTUw.YXAhig.uefM7kqiK6i9-QI7Kt0XBiOvsj4"
+const Token = "OTAwMzgzNTY1ODYxMjUzMTUw.YXAhig.tgnfjQ7Gb0l3H_rjmw7V1s2iprA"
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
@@ -38,14 +38,21 @@ const channel = guild.channels.cache.get('900022370964746310');
      }   
 
     TOTO();*/
+    result = "0000";
+    channel = client.channels.cache.get('900022370964746310');
 
+    client.on("message",message => 
+    {
     setInterval (function () {
-    result = Math.floor((Math.random() * 1000) + 1)
-  }, 1 * 60000); 
+     result = Math.floor((Math.random() * 1000) + 1)
+     message.channel.send("Salut, la fréquence Radio d'aujourdhui est : " + result);
+     
+  }, 1 * 120000); 
+})
 
 client.on("message",message => 
 {
-    if(message.content === "Radio")   
+    if(message.content === "!Radio")   
     {
         message.channel.send("Salut, la fréquence Radio d'aujourdhui est : " + result)
     }
